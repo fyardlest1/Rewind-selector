@@ -137,10 +137,30 @@
                    </pre>
                </div>
                <div class="col-lg-4">
-                    <p>The code is structured in three functions</p>
-                    <h5 class="border-1 border-bottom border-dark logoFont">Rewind Selector!</h5>
+                    <p><strong>-</strong> <em>The code is structured in three functions</em></p>
+                    <h5 class="border-1 border-bottom border-dark logoFont display-6">Rewind Selector!</h5>
                     <p>The Rewind Selector app allows the user to display strings in reverse".</p> 
-                    <h5 class="border-1 border-bottom border-dark logoFont">Let's break this code out!</h5>
+                    <h5 class="border-1 border-bottom border-dark logoFont display-6">Let's break this code out!</h5>
+                    <h4 class='logoFont'>getValue()</h4>
+                    <p>The application is divided into three functions and starts with our controller function "<strong>getValue</strong>". 
+                        This function takes into account an alert which will be displayed on the page in order to return the result of reverse string 
+                        by calling two other functions "<strong>reverseString</strong>" and "<strong>displayReverseString</strong>"
+                        but also returns an alert when the user presses the button without entering any value.
+                    </p>
+                    <h4 class='logoFont'>reverseString()</h4>
+                    <p>Here we have created a logic function and it takes the value that will be passed by the user as parameter. This function defines the logic of the application, we started by creating an empty array
+                        and start with a "<strong>for loop</strong>" which takes into account the length of the text entered by the user, 
+                        and starts an iteration from the end of the text to the beginning in order to rearrange the text from right to left, 
+                        and add each new string in the "<strong>reverseString</strong>" variable.
+                    </p>
+                    <h4 class='logoFont'>displayReverseString()</h4>
+                    <p>The "<strong>displayReverseString</strong>" is our view function and it was created to display the alert messages into the interface
+                        and it takes two parameters: the value passed by the user and the string that was reverse. 
+                    </p>
+                    <p>That will allow the two values to be compared to see if they are identical. 
+                        If the two values are the same the application will display two alert messages, 
+                        the first will display the result of reverse String and the second will display an alert to tell you that your string is a palindrome.</p>
+                    <cite>Post created by: Yardley Estiverne</cite>
                </div>
            </div>
        </div>
