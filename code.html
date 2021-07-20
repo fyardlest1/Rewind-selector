@@ -48,7 +48,7 @@
                         <a class="nav-link" target="_blank" href="https://github.com/fyardlest1/Rewind-selector">Git Repo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://fyardlest-portfolio.netlify.app/">About Me</a>
+                        <a class="nav-link" target="_blank" href="https://fyardlest.net/">About Me</a>
                     </li>
                 </ul>
             </div>
@@ -63,23 +63,84 @@
                <div class="col-lg-8">
                    <pre class='line-numbers'>
                        <code class='language-javascript'>
-                           // Calling "Hello World" with the constructor: Function
-                            function helloWorld() {
-                                alert('Hello World')
+                           // Get the string from the user.
+                            // Our Controller function or Entry point.
+                            const getValue = () => {
+                                document.getElementById('theAlert').classList.add('invisible')
+                                document.getElementById('palindAlert').classList.add('invisible')	
+                                
+                                if (document.getElementById('userString').value.length === 0) {
+                                    alert('Please enter a string')
+                                } else {
+                                    // get string from page.
+                                    let userString = document.getElementById('userString').value
+                                    userString = userString.toLowerCase()
+                                    
+                                    // we call reverseString
+                                    let revString = reverseString(userString)
+                                    revString = revString.toLowerCase()
+                                    
+                                    // we display the view
+                                    displayReverseString(revString, userString)
+                                }
+                                
                             }
 
-                            // Calling "Hello World" using Arrow function (=>)
-                            const helloWorld = () => {
-                                alert('Hello World')
+                            // Reverse the string.
+                            // Our logic function(s)
+                            const reverseString = (userString) => {
+                                let reverseString = []
+                                
+                                // reverse a string with a for loop
+                                for (
+                                    let index = userString.length - 1;
+                                    index >= 0;
+                                    index--
+                                ) {
+                                    reverseString += userString[index]
+                                }
+                                
+                                return reverseString
+
+                            }
+
+                            // Display the reversed string to the user.
+                            // Display or view functions
+                            const displayReverseString = (revString, userString) => {
+                                // compare arrays
+                                const result = JSON.stringify(userString) === JSON.stringify(revString)
+
+                                // if result is true
+                                if (result) {
+                                    // write a messase of the page
+                                    document.getElementById(
+                                        'msg'
+                                    ).innerHTML = `Your string reversed is: ${revString}`
+                                    // show the alert box
+                                    document.getElementById('theAlert').classList.remove('invisible')
+
+                                    // showing the palindrome messase
+                                    document.getElementById('palindMsg').innerHTML =
+                                        'Your Sting is a palindrome, Yeah!!!'
+                                    // show the alert box
+                                    document.getElementById('palindAlert').classList.remove('invisible')
+                                } else {
+                                    // write a messase of the page
+                                    document.getElementById(
+                                        'msg'
+                                    ).innerHTML = `Your string reversed is: ${revString}`
+                                    // show the alert box
+                                    document.getElementById('theAlert').classList.remove('invisible')
+                                }
                             }
                        </code>
                    </pre>
                </div>
                <div class="col-lg-4">
-                    <p>The code is structured in one function</p>
-                    <h5>Hello World!</h5>
-                    <p>helloWorld is a function that display an alert with the message: "Hello World".
-                        And those two ways return the same results.</p> 
+                    <p>The code is structured in three functions</p>
+                    <h5 class="border-1 border-bottom border-dark logoFont">Rewind Selector!</h5>
+                    <p>The Rewind Selector app allows the user to display strings in reverse".</p> 
+                    <h5 class="border-1 border-bottom border-dark logoFont">Let's break this code out!</h5>
                </div>
            </div>
        </div>
