@@ -4,7 +4,7 @@
     --primary-color: #ff0000;
     --secondary-color: #3a0ca3;
     --dark-color: #292929;
-    --dark-blue-color: #011627;
+    --dark-blue-color: #14213d;
     --white-color: #eaf1ec;
     --gray-color: #d9d9d9;
     --orange-color: #ff993b;
@@ -16,7 +16,7 @@ body {
 }
 
 nav {
-    background-color: var(--dark-color)
+    background-color: var(--dark-blue-color)
 }
 
 main>.container {
@@ -62,7 +62,7 @@ pre[class="language-"]  {
 }
 
 footer {
-    background-color: var(--dark-color);
+    background-color: var(--dark-blue-color);
     padding-right: 1rem;
 }
 
