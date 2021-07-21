@@ -6,14 +6,19 @@ const getValue = () => {
 	
     if (document.getElementById('userString').value.length === 0) {
 		alert('Please enter a string')
-    } else {
+	} else {
+		// string validation
+		let regex = /[^a-z0-9]/gi
 		// get string from page.
 		let userString = document.getElementById('userString').value
-        userString = userString.toLowerCase()
+		userString = userString.toLowerCase()
+		userString = userString.replace(regex, '')
+		
         
 		// we call reverseString
 		let revString = reverseString(userString)
-        revString = revString.toLowerCase()
+		revString = revString.toLowerCase()
+		revString = revString.replace(regex,)
         
 		// we display the view
 		displayReverseString(revString, userString)
@@ -36,12 +41,13 @@ const reverseString = (userString) => {
     }
     
     return reverseString
-
 }
 
 // Display the reversed string to the user.
 // Display or view functions
 const displayReverseString = (revString, userString) => {
+	let regex = /[^a-z0-9]/gi;
+	
 	// compare arrays
 	const result = JSON.stringify(userString) === JSON.stringify(revString)
 
